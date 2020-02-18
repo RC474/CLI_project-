@@ -20,7 +20,7 @@ class CLI
     puts "Fetching restaurants data...."
     
     if input == "exit"
-      exit_msg
+      puts "Thank you see you later"
     else
       if valid_zip?(input)
         Scraper.new.scrape_list(input)
