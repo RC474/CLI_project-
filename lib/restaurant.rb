@@ -23,7 +23,8 @@ class Restaurant
       puts "#{index + 1}. #{restaurant.name}"
     end
     
-    puts "#{@@restaurants.length + 1}.Exit"
+    puts "Exter <exit> to exit"
   end
 
 end
+

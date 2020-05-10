@@ -1,6 +1,7 @@
 class CLI 
   def start
     puts "Welcome to the Restaurants Searching App."
+    puts "--------------------------------------------"
     main_menu
   end
 
@@ -14,10 +15,11 @@ class CLI
 
   def main_menu 
     puts "Please enter your zip code:"
+    puts "---------------------------------"
     puts "Enter <exit> to exit"
 
     input = gets.strip
-    puts "Fetching restaurants data...."
+    #puts "Fetching restaurants data...."
     
     if input == "exit"
       puts "Thank you see you later"
@@ -36,7 +38,7 @@ class CLI
   end #End of main_menu
 
   def restaurant_detail
-    puts "Select Restaurnat number for detail:"
+    puts "Select Restaurnat index for detail:"
 
     input = gets.strip.to_i
     
@@ -45,8 +47,9 @@ class CLI
       puts restaurant.name
       puts restaurant.details
       restaurant_detail
-    elsif input == Restaurant.restaurants.length + 1
-      puts "Thanks, see you later!"
+    elsif input == 0
+      puts "Main menu exter another zip"
+      main_menu
     else
       puts "Wrong input, Please try again!"
       restaurant_detail

@@ -7,7 +7,5 @@ class Scraper
 
       Restaurant.new(name, details)
     end
-
-    # puts Restaurant.restaurants.length
   end
 end
